@@ -39,7 +39,14 @@ header {
     padding:4em;
 }
 
-.camera {
+.intro-content2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 4em 12em 4em 4em;
+}
+
+.pics {
     width:700px;
 }
 
@@ -53,7 +60,15 @@ header {
     font-weight:200;
 }
 
-.intro-appear {
+
+.fade-in {
     opacity: 1;
+    animation: fade-in 1000ms ease;
     transform: translateY(0px);
-}
+  }
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
