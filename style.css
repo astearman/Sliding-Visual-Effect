@@ -8,6 +8,14 @@ p {
     line-height: 2em;
 }
 
+h1 {
+    color: white;
+    font-size:4em;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
 body {
     font-family: 'Montserrat', normal;
     min-height:100vh;
@@ -16,8 +24,9 @@ body {
 header {
     display:flex;
     position: relative;
-    height:700px;
+    height:785px;
     width:100%;
+    background: url('img/banner.jpg') no-repeat center center/cover;
 }
 
 .intro {
@@ -50,7 +59,7 @@ header {
     width:700px;
 }
 
-.intro-text {
+.row1 {
     width:30%;
     opacity: 0;
     transform: translateY(20px);
@@ -61,14 +70,104 @@ header {
 }
 
 
+.row2,
+.row3,
+.row4,
+.row5 {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    width:100%;
+    opacity: 0;
+    transition: 0.8s all ease-in-out;
+}
+
+.row2,
+.row4 {
+    transform: translateX(225px);
+}
+
+.row3 {
+    transform: translateX(-225px);
+}
+
+.row5 {
+    transform: translateY(50px);
+}
+
 .fade-in {
     opacity: 1;
     animation: fade-in 1000ms ease;
     transform: translateY(0px);
-  }
+}
+
+.fade-in2 {
+    opacity: 1;
+    animation: fade-in 1000ms ease;
+    transform: translateX(0px);
+}
+
+.fade-in3 {
+    opacity: 1;
+    animation: fade-in 1000ms ease;
+    transform: translateX(0px);
+}
 
 .hidden {
     opacity: 0;
     transform: translateY(20px);
-  }
+}
+
+.hidden2 {
+    opacity: 0;
+    transform: translateX(225px);
+}
+
+.hidden3 {
+    opacity: 0;
+    transform: translateX(-225px);
+}
   
+span {
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(50px);
+}
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.empty {
+    height:800px;
+}
+
+.scenery {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mountain {
+    background: url(img/mountain.jpg);
+    height: 800px;
+}
+
+.stream {
+    background-image: url(img/stream.jpg);
+    height:500px;
+}
+
+.rainbow {
+    background-image: url(img/rainbow.jpg);
+    height:500px;
+}
+
+.dream {
+    background-image: url(img/dream.jpg);
+    height:500px;
+}
+
+
+
