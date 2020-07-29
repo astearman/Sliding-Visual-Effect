@@ -1,5 +1,5 @@
 
-const elements = document.querySelectorAll(".hidden, .hidden2, .hidden3");
+const elements = document.querySelectorAll(".hidden, .hidden2, .hidden3, .hidden4");
 const windowHeight = window.innerHeight / 1.5;
 
 
@@ -22,6 +22,10 @@ scrollAppear = () => {
       element.classList.replace("hidden3", "fade-in3");
     }
 
+    if(positionFromTop < windowHeight) {
+      element.classList.replace("hidden4", "fade-in4");
+    }
+
     // re-hide elements after leaving the screen
     if (
       positionFromTop > windowHeight * 1.5 ||
@@ -30,6 +34,7 @@ scrollAppear = () => {
       element.classList.replace("fade-in", "hidden");
       element.classList.replace("fade-in2", "hidden2");
       element.classList.replace("fade-in3", "hidden3");
+      element.classList.replace("fade-in4", "hidden4");
     }
   });
 };
@@ -38,7 +43,7 @@ window.addEventListener("scroll", scrollAppear);
 
 
 
-/*
+
 const text = document.querySelector('.fancy');
 const stringText = text.textContent;
 const splitText = stringText.split("");
@@ -66,5 +71,5 @@ function complete() {
   clearInterval(timer);
   timer = null;
 }
-*/
+
 

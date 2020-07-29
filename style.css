@@ -9,8 +9,7 @@ p {
 }
 
 h1 {
-    color: white;
-    font-size:4em;
+    font-size:3em;
     font-family: sans-serif;
     text-align: center;
 }
@@ -23,8 +22,8 @@ body {
 
 header {
     display:flex;
-    position: relative;
-    height:785px;
+    position: sticky;
+    height:100%;
     width:100%;
     background: url('img/banner.jpg') no-repeat center center/cover;
 }
@@ -73,7 +72,8 @@ header {
 .row2,
 .row3,
 .row4,
-.row5 {
+.row5,
+.row6 {
     display:flex;
     justify-content: center;
     align-content: center;
@@ -95,6 +95,10 @@ header {
     transform: translateY(50px);
 }
 
+.row6 {
+    transform: translateY(-200px);
+}
+
 .fade-in {
     opacity: 1;
     animation: fade-in 1000ms ease;
@@ -113,6 +117,12 @@ header {
     transform: translateX(0px);
 }
 
+.fade-in4 {
+    opacity: 1;
+    animation: fade-in 1000ms ease;
+    transform: translateY(150px) translateX(-400px);
+}
+
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -126,6 +136,11 @@ header {
 .hidden3 {
     opacity: 0;
     transform: translateX(-225px);
+}
+
+.hidden4 {
+    opacity: 0;
+    transform: translateY(-200px);
 }
   
 span {
@@ -147,27 +162,53 @@ span.fade {
     display: flex;
     align-items: center;
     width: 100%;
+    overflow:hidden;
 }
 
 .mountain {
     background: url(img/mountain.jpg);
     height: 800px;
+    font-family: 'Shadows Into Light', cursive;
+    overflow:hidden;
 }
+
 
 .stream {
     background-image: url(img/stream.jpg);
-    height:500px;
+    height:600px;
+    width: 100%;
 }
 
 .rainbow {
-    background-image: url(img/rainbow.jpg);
-    height:500px;
+    background-image: url(img/rainbow-cropped.jpg);
+    height:600px;
+    width:100%;
 }
 
 .dream {
     background-image: url(img/dream.jpg);
-    height:500px;
+    height:600px;
+}
+
+.stream-rainbow {
+    width:100%;
+}
+
+.cursive {
+    font-family: 'Shadows Into Light', cursive;
+    font-size:4em;
+    color: white;
+}
+
+.thick {
+    font-family: 'Homemade Apple', cursive;
+    font-size:3em;
+    color: white;
 }
 
 
-
+.clouds {
+    background: url(img/clouds-with-swing.jpg);
+    width:100%;
+    height: 946px;
+}
