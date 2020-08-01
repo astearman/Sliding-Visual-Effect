@@ -17,20 +17,28 @@ h1 {
 
 body {
     font-family: 'Montserrat', normal;
-    min-height:100vh;
 }
 
-header {
-    display:flex;
-    position: sticky;
-    height:100%;
-    width:100%;
-    background: url('img/banner.jpg') no-repeat center center/cover;
+.banner {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 750px;
+    width: 100%;
+    background: url('img/banner.jpg');
+    align-items: center;
+    color:white;
+    margin-bottom:5em;
 }
 
 .intro {
     display: flex;
     flex-direction: column;
+}
+
+.fancy {
+    font-family: 'Satisfy', cursive;
+    color: yellow;
 }
 
 .intro-title {
@@ -44,14 +52,14 @@ header {
 .intro-content {
     display: flex;
     justify-content: space-between;
-    padding:4em;
+    padding:5em 7em 4em 7em;
 }
 
 .intro-content2 {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    padding: 4em 12em 4em 4em;
+    padding: 5em 15em 4em 7em;
 }
 
 .pics {
@@ -71,7 +79,6 @@ header {
 
 .row2,
 .row3,
-.row4,
 .row5,
 .row6 {
     display:flex;
@@ -82,13 +89,20 @@ header {
     transition: 0.8s all ease-in-out;
 }
 
-.row2,
-.row4 {
-    transform: translateX(225px);
+
+.row2 {
+    transform: translateY(-225px);
 }
 
 .row3 {
     transform: translateX(-225px);
+}
+
+.row4 {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    width:100%;
 }
 
 .row5 {
@@ -108,7 +122,7 @@ header {
 .fade-in2 {
     opacity: 1;
     animation: fade-in 1000ms ease;
-    transform: translateX(0px);
+    transform: translateY(0px);
 }
 
 .fade-in3 {
@@ -123,6 +137,13 @@ header {
     transform: translateY(150px) translateX(-400px);
 }
 
+.fade-in5 {
+    opacity:0;
+    animation: slide 1s ease;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -130,7 +151,7 @@ header {
 
 .hidden2 {
     opacity: 0;
-    transform: translateX(225px);
+    transform: translateY(-225px);
 }
 
 .hidden3 {
@@ -141,6 +162,10 @@ header {
 .hidden4 {
     opacity: 0;
     transform: translateY(-200px);
+}
+
+.hidden5 {
+    opacity: 0;
 }
   
 span {
@@ -168,7 +193,6 @@ span.fade {
 .mountain {
     background: url(img/mountain.jpg);
     height: 800px;
-    font-family: 'Shadows Into Light', cursive;
     overflow:hidden;
 }
 
@@ -195,7 +219,7 @@ span.fade {
 }
 
 .cursive {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Amatic SC', cursive;
     font-size:4em;
     color: white;
 }
@@ -211,4 +235,57 @@ span.fade {
     background: url(img/clouds-with-swing.jpg);
     width:100%;
     height: 946px;
+}
+
+.typing-content {
+    background: url(img/clouds-with-swing.jpg);
+    width:100%;
+    height: 946px;
+    color:white;
+    display: flex;
+    padding-top:40em;
+    padding-left:5em;
+
+}
+
+.typing {
+    position: relative;
+    margin-left: 10px;
+    font-family: 'Special Elite', cursive;
+    font-size:2em;
+}
+
+.typing::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 1px;
+    height: 9%;
+    border-right: 3px solid white;
+    animation: blink 0.5s infinite ease;
+}
+
+.typing-headline {
+    font-family: 'Special Elite', cursive;
+    font-size: 2em;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity:0;
+        transform: translateX(225px);
+    }
+    100% {
+        opacity:1;
+        transform: translateX(0px);
+    }
 }
